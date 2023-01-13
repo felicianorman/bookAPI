@@ -1,0 +1,24 @@
+type Books {
+    id: ID
+    name: String
+    description: String
+    author: String
+    genre: String
+    finished: Boolean
+}
+
+type DeletedSourceResponse {
+    deletedId: ID
+    success: Boolean
+}
+
+type Query {
+    getBookById(bookId: ID!): Books
+    getAllBooks: [Books]
+}
+
+# type Mutation {
+#     createBook(name: String!, description: String, author: String!, genre: String)
+#     updateBook(id: ID!, finished: Boolean!): Books
+#     deleteBooks(bookId: ID!): DeletedSourceResponse
+# }
