@@ -17,8 +17,6 @@ type Query {
     getAllBooks: [Books]
 }
 
-# type Mutation {
-#     createBook(name: String!, description: String, author: String!, genre: String)
-#     updateBook(id: ID!, finished: Boolean!): Books
-#     deleteBooks(bookId: ID!): DeletedSourceResponse
-# }
+type Mutation {
+    createBook(name: String!, description: String, author: String!, genre: String) :Books
+}
