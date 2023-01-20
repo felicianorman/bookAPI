@@ -1,15 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
+      rel="stylesheet"
+    />
+
     <script src="js/main.js" defer></script>
-    <link href="css/main.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet" />
     <title>Felicias Böcker</title>
-</head>
-<body>
-    <h1>Tja</h1>
-    
-</body>
+  </head>
+  <body>
+    <div class="wrapper--main">
+      <div class="wrapper--mini">
+        <h1>Felicias Läslista</h1>
+        <p>
+          Det här är samling med böcker som jag för nuvarande läser, eller har
+          läst klart. Jag betygsätter sedan varje bok, så om du är intresserad
+          av att läsa någon av böckerna från min läslista så har du ett hum av
+          vilka jag rekommenderar!
+        </p>
+
+        <button type="button" id="displayBtn" class="btn">Se mina läslista</button>
+
+        <div class="container--all" id="bookContainer"></div>
+      </div>
+    </div>
+  </body>
 </html>

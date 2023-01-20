@@ -4,6 +4,7 @@ type Books {
     rating: String
     author: String
     genre: String
+    url: String
 }
 
 type DeletedSourceResponse {
