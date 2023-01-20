@@ -43,6 +43,7 @@ getAllBtn.addEventListener("click", async () => {
 
 function createHTML(books) {
     let mainContainer = document.getElementById("bookContainer");
+    mainContainer.innerHTML = "";
     for (let i = 0; i < books.length; i++) {
         console.log(books[i]);
 

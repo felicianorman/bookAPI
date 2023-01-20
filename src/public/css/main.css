@@ -13,7 +13,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 70vw;
+    width: 75vw;
     height: 100vh;
     background-color: white;
     color: rgb(66, 56, 56);
@@ -21,4 +21,42 @@ body {
 
 p {
     width: 70%;
+}
+
+.btn {
+    margin-bottom: 50px;
+    background-color: rgb(137, 130, 130);
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.btn:hover {
+    background-color: rgb(166, 156, 156);
+}
+
+.container--all {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.book {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 550px;
+    box-shadow: 1px 10px 10px 1px rgba(2, 2, 26, 0.2);
+}
+
+.book--img {
+    width: 200px;
+}
+
+.book--title {
+    font-size: 1.3em;
 }
