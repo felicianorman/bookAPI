@@ -1,7 +1,7 @@
 type Books {
     id: ID
-    name: String
-    description: String
+    title: String
+    rating: String
     author: String
     genre: String
 }
