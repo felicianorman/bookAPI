@@ -4,7 +4,6 @@ type Books {
     description: String
     author: String
     genre: String
-    finished: Boolean
 }
 
 type DeletedSourceResponse {
@@ -13,10 +12,6 @@ type DeletedSourceResponse {
 }
 
 type Query {
-    getBookById(bookId: ID!): Books
     getAllBooks: [Books]
 }
 
-type Mutation {
-    createBook(name: String!, description: String, author: String!, genre: String) :Books
-}

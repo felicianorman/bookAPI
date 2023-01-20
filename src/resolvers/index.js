@@ -52,6 +52,7 @@ exports.resolvers = {
         author: args.author,
         genre: args.genre,
         description: args.description || "",
+        finished: args.finished
       };
 
       let filePath = path.join(
@@ -83,5 +84,32 @@ exports.resolvers = {
       //Returnerar vår respons
       return newBook;
     },
+    updateBook: async (_, args) => {
+        //Hämtar parametrar
+        const { id, finished } = args;
+
+        //Skapar filepath till boken
+        let filePath = path.join(__dirname, `../data/projects/${id}.json`);
+
+        //Kollar om boken vi vill ändra existerar
+        const bookExists = await fileExists(filePath);
+        if(!bookExists) return new GraphQLError("Den boken existerar inte");
+
+        //Skapar updateBook
+        const updateBook = {
+            id,
+            boolean
+        }
+
+        //Skriver över den gamla filen med den nya
+        await fsPromises.writeFile(filePath, JSON.stringify(updateBook));
+
+        //Returnerar uppdaterade objektet
+        return {
+            id: id,
+            finished: true
+        }
+
+    }
   },
 };
