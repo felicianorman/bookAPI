@@ -16,3 +16,15 @@ type Query {
     getAllBooks: [Books]
 }
 
+type Mutation {
+    addBook(input: addBookInput!): Books
+}
+
+input addBookInput {
+    title: String!
+    rating: String
+    author: String
+    genre: String
+    url: String!
+} 
+

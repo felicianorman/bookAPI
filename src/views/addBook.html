@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="js/newBook.js" defer></script>
+    <link href="css/newBook.css" rel="stylesheet" />
+    <title>Felicias Böcker</title>
+  </head>
+  <body>
+    <div class="wrapper--main">
+      <div class="wrapper--mini">
+        <h1>Lägg till en ny bok</h1>
+        <p>
+          Här kan du lägga till en ny bok! Glöm inte inkludera URL för bilden.
+        </p>
+
+        <form id="form">
+          <label for="bookTitle">Titel: </label>
+          <input type="text" id="bookTitle" />
+
+          <label for="bookAuthor">Författare: </label>
+          <input type="text" id="bookAuthor" />
+
+          <label for="bookGenre">Genre: </label>
+          <input type="text" id="bookGenre" />
+
+          <label for="bookRating">Betyg: </label>
+          <input type="text" id="bookRating" placeholder="1-5" />
+
+          <label for="bookUrl">Url: </label>
+          <input type="text" id="bookUrl" placeholder="http://...jpg" />
+
+          <button type="button" id="inputBtn" class="btn">Skicka</button>
+        </form>
+        <div class="container--all" id="bookContainer"></div>
+      </div>
+    </div>
+  </body>
+</html>

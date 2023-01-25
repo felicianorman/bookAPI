@@ -26,4 +26,51 @@ exports.resolvers = {
       return bookData;
     },
   },
+  Mutation: {
+    addBook: async (_, args) => {
+      const { title, rating, author, genre, url } = args.input
+
+      const newBook = {
+        id: crypto.randomUUID(),
+        title,
+        rating,
+        author,
+        genre, 
+        url
+      }
+
+      try {
+        const endpoint = process.env.BOOK_URI
+        const response = await axios.post(endpoint, 
+          { 
+            data: [newBook]
+          },
+          {
+            headers: {
+              'Accept-Encoding': 'gzip,deflate,compress',
+            }
+          })
+        
+      } catch(error) {
+        console.log(error)
+        return new GraphQLError('Kunde inte skapa bok')
+      }
+
+      return newBook
+    }
+  }
 };
+
+/**
+ * type Mutation {
+    addBook(input: addBookInput!): Books
+}
+
+input addBookInput {
+    title: String!
+    rating: String
+    author: String
+    genre: String
+    url: String!
+} 
+ */
