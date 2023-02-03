@@ -48,7 +48,7 @@ fetch('https://sheetdb.io/api/v1/olpxpsoqeyjnk')
   .then((data) => console.log(data));
 
 
-  books = await response.getAllBooks;
+  books = data;
   createHTML(books);
 });
 
