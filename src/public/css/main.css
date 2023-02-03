@@ -32,6 +32,11 @@ p {
     padding: 10px;
 }
 
+a { 
+    color: black;
+    text-decoration: none;
+}
+
 .btn:hover {
     background-color: rgb(166, 156, 156);
 }
@@ -61,4 +66,15 @@ p {
 
 .book--title {
     font-size: 1.3em;
+}
+
+@media screen and (max-width: 768px) {
+    .container--all {
+        flex-direction: column;
+    }
+
+    .book {
+        width: 100%;
+    }
+    
 }
