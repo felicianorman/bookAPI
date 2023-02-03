@@ -1,6 +1,6 @@
 require("dotenv").config();
 const { ApolloServer } = require("@apollo/server");
-const { resolvers } = require("./resolvers");
+const { resolvers } = require("..");
 const { loadFiles } = require("@graphql-tools/load-files");
 const { makeExecutableSchema } = require("@graphql-tools/schema");
 const path = require("path");
