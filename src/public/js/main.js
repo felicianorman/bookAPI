@@ -40,19 +40,13 @@ getAllBtn.addEventListener("click", async () => {
       url
     }
   }`;
+// Sort results by id in descending order, take two
+// and return the age as an integer.
 
-  fetch("https://sheetdb.io/api/v1/olpxpsoqeyjnk", {
-    method: "POST",
-    headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(getAllBooksQuery),
-  })
-    .then((response) => response.json())
-    .then((data) => console.log(data));
+fetch('https://sheetdb.io/api/v1/58f61be4dda40?sort_by=id&sort_order=desc&limit=2&cast_numbers=age')
+  .then((response) => response.json())
+  .then((data) => console.log(data));
 
-  console.log(response);
 
   books = await response.getAllBooks;
   createHTML(books);
