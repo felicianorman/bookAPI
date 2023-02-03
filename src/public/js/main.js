@@ -1,22 +1,32 @@
 let books = [];
 
-const graphQlQuery = async (url, query, variables = {}) => {
-  const response = await fetch(url, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      query,
-      variables,
-    }),
-  });
+// const graphQlQuery = async (url, query, variables = {}) => {
+//   const response = await fetch(url, {
+//     method: "POST",
+//     headers: {
+//       "Content-Type": "application/json",
+//     },
+//     body: JSON.stringify({
+//       query,
+//       variables,
+//     }),
+//   });
 
-  const res = await response.json();
-  return res.data;
-};
+//   const res = await response.json();
+//   return res.data;
+// };
 
-const getAllBooksQuery = `query Query {
+
+
+
+  
+
+
+
+let getAllBtn = document.getElementById("displayBtn");
+
+getAllBtn.addEventListener("click", async () => {
+  const getAllBooksQuery = `query Query {
     getAllBooks {
       id
       title
@@ -27,19 +37,25 @@ const getAllBooksQuery = `query Query {
     }
   }`;
 
-let getAllBtn = document.getElementById("displayBtn");
-
-getAllBtn.addEventListener("click", async () => {
-  const response = await graphQlQuery(
-    "http://localhost:4000/graphql",
-    getAllBooksQuery
-  );
+  
+  fetch("https://sheetdb.io/api/v1/olpxpsoqeyjnk", {
+    method: "GET",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(getAllBooksQuery),
+  })
+    .then((response) => response.json())
+    .then((data) => console.log(data));
 
   console.log(response);
 
   books = await response.getAllBooks;
   createHTML(books);
 });
+
+/** */
 
 function createHTML(books) {
     let mainContainer = document.getElementById("bookContainer");
