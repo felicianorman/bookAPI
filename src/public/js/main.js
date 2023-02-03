@@ -43,7 +43,7 @@ getAllBtn.addEventListener("click", async () => {
 // Sort results by id in descending order, take two
 // and return the age as an integer.
 
-fetch('https://sheetdb.io/api/v1/58f61be4dda40?sort_by=id&sort_order=desc&limit=2&cast_numbers=age')
+fetch('https://sheetdb.io/api/v1/olpxpsoqeyjnk')
   .then((response) => response.json())
   .then((data) => console.log(data));
 
