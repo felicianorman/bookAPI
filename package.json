@@ -9,7 +9,8 @@
     "axios": "^1.2.3",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
-    "graphql": "^16.6.0"
+    "graphql": "^16.6.0",
+    "vercel": "^28.15.0"
   },
   "scripts": {
     "dev": "nodemon ./src/server.js"
