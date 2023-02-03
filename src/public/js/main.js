@@ -45,9 +45,9 @@ getAllBtn.addEventListener("click", async () => {
 
 fetch('https://sheetdb.io/api/v1/olpxpsoqeyjnk')
   .then((response) => response.json())
-  .then((data) => console.log(data));
+  .then((data) => createHTML(data));
 
-  createHTML(data);
+  
 });
 
 function createHTML(books) {
