@@ -33,7 +33,7 @@ async function run() {
 
     //startar vår server
     await server.start();
-    app.use(expressMiddleware(server));
+    app.use("/graphql", app);
 
     app.listen(port, () => {
       console.log(`Server ready at http://localhost:${port}`);
