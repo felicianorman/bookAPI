@@ -5,7 +5,7 @@ const {
   readJsonFile,
   deleteFile,
   getDirectoryFileNames,
-} = require("./utils/fileHandling");
+} = require("../utils/fileHandling");
 const { GraphQLError, printType } = require("graphql");
 const crypto = require("crypto");
 const axios = require("axios").default;
