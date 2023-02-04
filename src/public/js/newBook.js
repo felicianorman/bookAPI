@@ -6,7 +6,7 @@ let url = document.getElementById("bookUrl");
 let inputBtn = document.getElementById("inputBtn");
 
 
-inputBtn.addEventListener("click", (e) => {
+inputBtn?.addEventListener("click", (e) => {
   console.log("Skickad");
   e.preventDefault();
   console.log(title.value);
